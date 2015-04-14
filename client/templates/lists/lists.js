@@ -1,9 +1,12 @@
 Template.lists.helpers({
-  times: function () {
-    var times = [];
-    _(20).times(function(n){
-      times.push(n);
-    });
-    return times;
-  }
+  //times: function () {
+  //  var times = [];
+  //  _(20).times(function(n){
+  //    times.push(n);
+  //  });
+  //  return times;
+  //}
+    posts: function(){
+        return Posts.find();
+    }
 });
