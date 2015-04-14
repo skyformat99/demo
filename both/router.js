@@ -13,7 +13,7 @@ Meteor.startup(function () {
 
 Router.map(function() {
 
-    this.route('lists');
+    this.route('lists', {path: '/'});
     this.route('userAccounts');
 
 
