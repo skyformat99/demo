@@ -30,7 +30,7 @@ Template.layout.events({
                     case 'logout':
                         Meteor.logout(function() {
                             toastr.success('Logged out');
-                            return Router.go('lists');
+                            return Router.go('/');
                         });
                         break;
                     case 'login':
