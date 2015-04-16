@@ -8,5 +8,16 @@ Template.lists.helpers({
   //}
     posts: function(){
         return Posts.find();
+    },
+
+    email: function(){
+        // console.log('current user name debug');
+        return Meteor.user().emails[0].address;
+    }
+});
+
+Template.lists.events({
+    'click .viewpost': function() {
+        return Router.go("/postView/" + this._id);
     }
 });
