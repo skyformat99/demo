@@ -17,7 +17,7 @@ Template.lists.helpers({
 });
 
 Template.lists.events({
-    'click .viewpost': function() {
-        return Router.go("/postView/" + this._id);
+    'click .viewPost': function() {
+        return Router.go("/viewPost/" + this._id); //"/postView/#{@_id}"
     }
 });
