@@ -21,5 +21,18 @@ Posts.attachSchema(new SimpleSchema({
     autoform: {
       type: 'toggle'
     }
-  }
+  },
+
+    authorId: {
+        type: String,
+        defaultValue: Fake.word()//,
+        //autoValue: function() {
+        //    if (this.isUpdate) {
+        //        return;
+        //    }
+        //    if (this.isInsert) {
+        //        return this.userId;
+        //    }
+        //}
+    }
 }));
