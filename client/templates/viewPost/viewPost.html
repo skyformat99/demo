@@ -1,0 +1,24 @@
+<template name="viewPost">
+  {{#contentFor "headerButtonLeft"}}
+
+    {{>ionNavBackButton text=" " icon="ios-list-outline" path="lists"}}
+
+  {{/contentFor}}
+
+  {{#contentFor "headerTitle"}}
+      <h1 class="title">{{userName authorId}}</h1>
+  {{/contentFor}}
+
+  <!--{{#if isMyPost}}-->
+    {{#contentFor "headerButtonRight"}}
+        <button class="button button-clear">Edit</button>
+    {{/contentFor}}
+  <!--{{/if}}-->
+
+  {{#ionView}}
+    {{#ionContent}}
+
+
+    {{/ionContent}}
+  {{/ionView}}
+</template>
