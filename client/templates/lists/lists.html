@@ -8,7 +8,8 @@
   {{#contentFor "headerButtonRight"}}
       <button class="button button-clear" id="showProfileMenu">
         {{#if currentUser}}
-            Hi, {{currentUser.username}} <i class="icon ion-ios-person"></i>
+            <!--Hi, {{currentUser.username}} <i class="icon ion-ios-person"></i>-->
+            Hi, {{email}} <i class="icon ion-ios-person"></i>
         {{else}}
             <i class="icon ion-ios-person-outline"></i>
         {{/if}}
@@ -31,14 +32,16 @@
 </template>
 
 <template name="singlepost">
-  {{#ionItem buttonRight=true avatar=true}}
+    <div class="viewpost" data-id="{{_id}}">
+      {{#ionItem buttonRight=true avatar=true}}
 
-      <img src="https://randomuser.me/api/portraits/thumb/men/27.jpg">
-      <h2>{{title}}</h2>
-      <p>
-          {{body}}
-      </p>
-      <button class="button button-clear">{{> ionIcon icon="chevron-right"}}</button>
+          <img src="https://randomuser.me/api/portraits/thumb/men/27.jpg">
+          <h2>{{title}}</h2>
+          <p>
+              {{body}}
+          </p>
+          <button class="button button-clear">{{> ionIcon icon="chevron-right"}}</button>
 
-  {{/ionItem}}
+      {{/ionItem}}
+    </div>
 </template>
