@@ -13,5 +13,8 @@ Template.viewPost.helpers({
         var currentUser;
         currentUser = Meteor.users.findOne(authorId);
         return currentUser != null ? currentUser.username : void 0;
+    },
+    post: function(){
+        return {title: '1234', body: 'abcd'};
     }
 });

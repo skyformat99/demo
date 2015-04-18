@@ -17,13 +17,13 @@ Router.map(function() {
     this.route('userAccounts');
     //this.route('viewPost');
     this.route('viewPost', {
-        path: '/viewPost/:_id'//,
+        path: '/viewPost/:_id',
         //subscriptions: function() {
         //    Meteor.subscribe('postForView', this.params._id);
         //},
-        //data: function() {
-        //    return Posts.findOne(this.params._id);
-        //}
+        data: function() {
+            return Posts.findOne(this.params._id);
+        }
     });
 
     this.route('addPost');

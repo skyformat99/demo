@@ -45,4 +45,3 @@ Template.layout.events({
         });
     }
 });
-RunLink
